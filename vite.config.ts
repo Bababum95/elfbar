@@ -5,7 +5,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 const SRC_PATH = resolve(__dirname, 'src');
 
 export default defineConfig({
-	base: '/',
+	base: '/elfbar/',
 	build: {
 		rollupOptions: {
 			input: {

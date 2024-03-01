@@ -30,8 +30,17 @@ $grey: #f8f8f8;
   @include wrapper;
   padding: 20px 0;
 
-  &__logo {
+  &__logo-link {
+    display: block;
     width: 154px;
+    height: 50px;
+    background-image: url('/logo.png');
+    background-size: cover;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-image: url('/logo-active.png');
+    }
   }
 }
 
@@ -148,7 +157,7 @@ $grey: #f8f8f8;
   @include wrapper;
   display: grid;
   grid-template-columns: 284px 412px;
-  grid-template-rows: 114px 114px;
+  grid-template-rows: 142px 86px 56px;
   gap: 20px;
   margin-bottom: 200px;
 
@@ -194,7 +203,14 @@ $grey: #f8f8f8;
       background-repeat: no-repeat;
       background-position: 275px 50%;
       background-size: 120px auto;
+      grid-row-end: span 2;
     }
+  }
+
+  .info__button {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 64px;
   }
 }
 

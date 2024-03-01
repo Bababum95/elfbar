@@ -1,3 +1,11 @@
+/**
+ * Function to start a marquee effect on the given HTML element.
+ *
+ * @param {HTMLElement} element     - The HTML element to apply the marquee effect to
+ * @param {number}      repeatCount - The number of times to repeat the content in the marquee
+ * @param {number}      step        - The step size for the marquee animation
+ * @return {void}
+ */
 const startMarquee = (element: HTMLElement, repeatCount = 7, step = 1) => {
 	const animateMarquee = () => {
 		position = position < width ? position + step : 1;

@@ -1,18 +1,21 @@
 {
   "name": "elfbar",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.2.0",
   "type": "module",
   "scripts": {
     "dev": "NODE_ENV=development vite --mode development",
     "build": "tsc && vite build",
     "optimize-images": "node scripts/optimize-images.js",
     "compressed-image": "node scripts/compressed-image.js",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
     "@wordpress/eslint-plugin": "^17.9.0",
+    "gh-pages": "^5.0.0",
     "sass": "^1.69.5",
     "sharp": "^0.33.2",
     "svgo": "^3.2.0",
