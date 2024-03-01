@@ -1,26 +1,295 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ELFBAR</title>
-  </head>
-  <body>
-    <header><img src="/logo.png" /></header>
-    <h1>ELFBAR 600 kaufen</h1>
-    <p>Hol Dir die umfangreiche Auswahl an Elfbar 600 Sorten und alle Modelle direkt in unserem Shop – Originalqualität zu top Preisen!</p>
-    <button>
-      Zum Shop
-      <svg width="6" height="10"  fill="none" stroke="#FFF">
-        <use xlink:href="#arow" />
-      </svg>      
-    </button>
-    <svg display="none" xmlns="http://www.w3.org/2000/svg">
-      <symbol id="arow" viewBox="0 0 6 10" width="6" height="10" fill="none">
-        <path d="M1 0.984375L5 4.98438L1 8.98438" stroke="inherit"/>
-      </symbol>
-    </svg>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/ico" href="/fav.ico" />
+  <link rel="stylesheet" href="/src/styles.scss" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELFBAR</title>
+  <!-- <meta name="description" content="Hol Dir die umfangreiche Auswahl an Elfbar 600 Sorten und alle Modelle direkt in unserem Shop – Originalqualität zu top Preisen!"> -->
+</head>
+
+<body class="body">
+  <header class="header">
+    <a href="#" class="header__logo-link">
+      <img src="/logo.png" class="header__logo" alt="ELFBAR Logo" />
+    </a>
+  </header>
+  <main class="main">
+
+    <div class="info">
+      <h1 class="info__title">ELFBAR 600 kaufen</h1>
+      <p class="info__subtitle">
+        Hol Dir die umfangreiche Auswahl an Elfbar 600 Sorten und alle Modelle direkt in unserem Shop – Originalqualität
+        zu top Preisen!
+      </p>
+      <a href="#" class="info__button">
+        Zum Shop
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="one" d="M1 1.5L7.06667 8L1 14.5" stroke="url(#gradient)" stroke-width="1.6" />
+          <path class="two" d="M8.07031 1.5L15.0036 8L8.07031 14.5" stroke="url(#gradient)" stroke-width="1.6" />
+          <path class="three" d="M16 1.5L22.0667 8L16 14.5" stroke="url(#gradient)" stroke-width="1.6" />
+          <defs>
+            <linearGradient id="gradient" x1="9.03516" y1="9.91797" x2="5.58735" y2="1.50383" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FDD8BB" />
+              <stop offset="0.310009" stop-color="#DB71E0" />
+              <stop offset="0.680008" stop-color="#A25EEF" />
+              <stop offset="1" stop-color="#68CBE2" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </a>
+    </div>
+
+    <div class="divider">
+      <div id="marquee-2" class="divider__line">
+        <p class="divider__text">Favorite Flavors</p>
+      </div>
+      <div id="marquee-1" class="divider__line">
+        <p class="divider__text">Favorite Flavors</p>
+      </div>
+    </div>
+
+    <div class="delivery">
+      <div class="delivery__item delivery__item_free">
+        <p class="delivery__item-title">Kostenoser Versand</p>
+        <p class="delivery__item-text">ab 39€</p>
+        <video class="delivery__item_free-img" autoplay loop muted>
+          <source src="/animation/delivered-by-a-drone.webm" type="video/webm">
+        </video>
+      </div>
+      <div class="delivery__item">
+        <p class="delivery__item-title">Originale </p>
+        <p class="delivery__item-text">TDP zugelassene Produkte</p>
+      </div>
+      <div class="delivery__item delivery__item_dhl">
+        <p class="delivery__item-title">Versand</p>
+        <p class="delivery__item-text">am selben Tag mit DHL</p>
+      </div>
+    </div>
+
+    <div class="sorten">
+      <p class="sorten__title">Beliebte Sorten</p>
+      <ul class="sorten__list">
+        <li class="sorten__item">
+          <a href="#" class="sorten__item-link">
+            <p class="sorten__item-title">Watermelon Ice</p>
+            <span class="sorten__item-span">
+              Mehr
+              <svg width="6" height="10" fill="none" stroke="#000">
+                <use xlink:href="#arow" />
+              </svg>
+            </span>
+          </a>
+          <img class="sorten__item-img" src="/images/sorten/watermelon-Ice.png" alt="Watermelon Ice">
+        </li>
+        <li class="sorten__item">
+          <a href="#" class="sorten__item-link">
+            <p class="sorten__item-title">Blueberry Ice</p>
+            <span class="sorten__item-span">
+              Mehr
+              <svg width="6" height="10" fill="none" stroke="#000">
+                <use xlink:href="#arow" />
+              </svg>
+            </span>
+          </a>
+          <img class="sorten__item-img" src="/images/sorten/blueberry-ice.png" alt="Blueberry Ice">
+        </li>
+        <li class="sorten__item">
+          <a href="#" class="sorten__item-link">
+            <p class="sorten__item-title">Blue Razz Lemonade</p>
+            <span class="sorten__item-span">
+              Mehr
+              <svg width="6" height="10" fill="none" stroke="#000">
+                <use xlink:href="#arow" />
+              </svg>
+            </span>
+          </a>
+          <img class="sorten__item-img" src="/images/sorten/blue-razz-lemonade.png" alt="Blue Razz Lemonade">
+        </li>
+        <li class="sorten__item">
+          <a href="#" class="sorten__item-link">
+            <p class="sorten__item-title">Kiwi Passion Fruit Guava</p>
+            <span class="sorten__item-span">
+              Mehr
+              <svg width="6" height="10" fill="none" stroke="#000">
+                <use xlink:href="#arow" />
+              </svg>
+            </span>
+          </a>
+          <img class="sorten__item-img" src="/images/sorten/kiwi-passion-fruit-guava.png"
+            alt="Kiwi Passion Fruit Guava">
+        </li>
+        <li class="sorten__item">
+          <a href="#" class="sorten__item-link">
+            <p class="sorten__item-title">Banana Ice</p>
+            <span class="sorten__item-span">
+              Mehr
+              <svg width="6" height="10" fill="none" stroke="#000">
+                <use xlink:href="#arow" />
+              </svg>
+            </span>
+          </a>
+          <img class="sorten__item-img" src="/images/sorten/banana-ice.png" alt="Banana Ice">
+        </li>
+        <li class="sorten__item sorten__item_other">
+          <a href="#" class="sorten__item-link sorten__item_other-link">
+            <span class="sorten__item-span sorten__item_other-span">
+              Mehr erfahren
+              <svg width="6" height="10" fill="none" stroke="#000">
+                <use xlink:href="#arow" />
+              </svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="faq-list">
+      <li class="faq-list__item">
+        <details class="faq-list__item-details">
+          <summary class="faq-list__item-summary">
+            <h2 class="faq-list__item-title">
+              Wie überprüfe ich die Echtheit meiner Elf Bar?
+            </h2>
+            <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
+              <use xlink:href="#big-arow" />
+            </svg>
+          </summary>
+          <p class="faq-list__item-text">
+            Jede Elf Bar kommt mit einem Authentifizierungscode, den Du auf der offiziellen Website überprüfen kannst,
+            um
+            die Echtheit zu bestätigen.
+          </p>
+        </details>
+      </li>
+      <li class="faq-list__item">
+        <details class="faq-list__item-details">
+          <summary class="faq-list__item-summary">
+            <h2 class="faq-list__item-title">
+              Wie lagere ich meine Elf Bar richtig?
+            </h2>
+            <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
+              <use xlink:href="#big-arow" />
+            </svg>
+          </summary>
+          <p class="faq-list__item-text">
+            Bewahre Deine Elf Bar an einem kühlen, trockenen Ort auf, fern von direkter Sonneneinstrahlung und
+            Wärmequellen, um die Qualität zu bewahren.
+          </p>
+        </details>
+      </li>
+      <li class="faq-list__item">
+        <details class="faq-list__item-details">
+          <summary class="faq-list__item-summary">
+            <h2 class="faq-list__item-title">
+              Wie unterscheiden sich verschiedene Elf Bar Modelle?
+            </h2>
+            <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
+              <use xlink:href="#big-arow" />
+            </svg>
+          </summary>
+          <p class="faq-list__item-text">
+            Jedes Elf Bar Modell bietet unterschiedliche Geschmacksrichtungen, Batterielebensdauer und Design, um eine
+            breite Palette von Vorlieben und Bedürfnissen zu erfüllen.
+          </p>
+        </details>
+      </li>
+      <li class="faq-list__item">
+        <details class="faq-list__item-details">
+          <summary class="faq-list__item-summary">
+            <h2 class="faq-list__item-title">
+              Kann ich meine Elf Bar im Flugzeug mitnehmen?
+            </h2>
+            <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
+              <use xlink:href="#big-arow" />
+            </svg>
+          </summary>
+          <p class="faq-list__item-text">
+            Ja, Elf Bars können im Handgepäck mitgeführt werden, beachten Sie jedoch die Fluggesellschaftsrichtlinien
+            bezüglich elektronischer Geräte und Flüssigkeiten.
+          </p>
+        </details>
+      </li>
+      <li class="faq-list__item">
+        <details class="faq-list__item-details">
+          <summary class="faq-list__item-summary">
+            <h2 class="faq-list__item-title">
+              Wie verwende ich meine Elf Bar?
+            </h2>
+            <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
+              <use xlink:href="#big-arow" />
+            </svg>
+          </summary>
+          <p class="faq-list__item-text">
+            Einfach am Mundstück ziehen – Elf Bars sind mit einer automatischen Aktivierung ausgestattet, die den
+            Gebrauch
+            kinderleicht macht.
+          </p>
+        </details>
+      </li>
+      <li class="faq-list__item">
+        <details class="faq-list__item-details">
+          <summary class="faq-list__item-summary">
+            <h2 class="faq-list__item-title">
+              Kann ich meine Elf Bar wieder aufladen?
+            </h2>
+            <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
+              <use xlink:href="#big-arow" />
+            </svg>
+          </summary>
+          <p class="faq-list__item-text">
+            Modelle wie Elfbar Mate und Elfbar ELFA ermöglichen eine Wiederaufladung, während die Elfbar 600 für den
+            Einmalgebrauch ohne Auflademöglichkeit gedacht ist.
+          </p>
+        </details>
+      </li>
+      <li class="faq-list__item">
+        <details class="faq-list__item-details">
+          <summary class="faq-list__item-summary">
+            <h2 class="faq-list__item-title">
+              Wie entsorge ich meine Elf Bar?
+            </h2>
+            <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
+              <use xlink:href="#big-arow" />
+            </svg>
+          </summary>
+          <p class="faq-list__item-text">
+            Elf Bars sollten nicht im Hausmüll entsorgt werden, sondern als Elektroschrott. Es gibt zahlreiche spezielle
+            Sammelstellen, um eine umweltgerechte Entsorgung sicherzustellen.
+          </p>
+      </li>
+    </ul>
+  </main>
+  <svg display="none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="arow" viewBox="0 0 6 10" width="6" height="10" fill="none">
+      <path d="M1 0.984375L5 4.98438L1 8.98438" stroke="inherit" />
+    </symbol>
+    <symbol id="big-arow" viewBox="0 0 9 15" fill="none">
+      <path d="M1 1.48438L7 7.48438L1 13.4844" stroke="inherit" stroke-width="1.5" />
+    </symbol>
+    <symbol id="triple-arow" viewBox="0 0 24 16" fill="none">
+        <path d="M1 1.5L7.06667 8L1 14.5" stroke="url(#paint0_linear_1619_65464)" stroke-width="1.6" />
+        <path d="M8.07031 1.5L15.0036 8L8.07031 14.5" stroke="url(#paint1_linear_1619_65464)" stroke-width="1.6" />
+        <path d="M16 1.5L22.0667 8L16 14.5" stroke="white" stroke-width="1.6" />
+        <defs>
+          <linearGradient id="paint0_linear_1619_65464" x1="9.03516" y1="9.91797" x2="5.58735" y2="1.50383" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FDD8BB" />
+            <stop offset="0.310009" stop-color="#DB71E0" />
+            <stop offset="0.680008" stop-color="#A25EEF" />
+            <stop offset="1" stop-color="#68CBE2" />
+          </linearGradient>
+          <linearGradient id="paint1_linear_1619_65464" x1="17.2533" y1="9.91797" x2="14.1313" y2="1.21043" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FDD8BB" />
+            <stop offset="0.310009" stop-color="#DB71E0" />
+            <stop offset="0.680008" stop-color="#A25EEF" />
+            <stop offset="1" stop-color="#68CBE2" />
+          </linearGradient>
+        </defs>
+    </symbol>
+  </svg>
+  <script type="module" src="/src/main.ts" async></script>
+</body>
+
 </html>

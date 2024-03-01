@@ -1,5 +1,6 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 const SRC_PATH = resolve(__dirname, 'src');
 
@@ -17,6 +18,7 @@ export default defineConfig({
 		assetsDir: 'assets',
 		emptyOutDir: true,
 		minify: true,
-		manifest: true,
+		manifest: false,
 	},
+	plugins: [ViteImageOptimizer()],
 });

@@ -6,13 +6,19 @@
   "scripts": {
     "dev": "NODE_ENV=development vite --mode development",
     "build": "tsc && vite build",
+    "optimize-images": "node scripts/optimize-images.js",
+    "compressed-image": "node scripts/compressed-image.js",
     "preview": "vite preview"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
     "@wordpress/eslint-plugin": "^17.9.0",
     "sass": "^1.69.5",
+    "sharp": "^0.33.2",
+    "svgo": "^3.2.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-plugin-image-optimizer": "^1.1.7"
   }
 }
