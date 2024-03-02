@@ -1,11 +1,13 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import { createHtmlPlugin } from 'vite-plugin-html';
 
 const SRC_PATH = resolve(__dirname, 'src');
+const BASE_PATH = process.env.NODE_ENV === 'pages' ? '/elfbar/' : '/';
 
 export default defineConfig({
-	base: '/elfbar/',
+	base: BASE_PATH,
 	build: {
 		rollupOptions: {
 			input: {
@@ -20,5 +22,14 @@ export default defineConfig({
 		minify: true,
 		manifest: false,
 	},
-	plugins: [ViteImageOptimizer()],
+	plugins: [
+		ViteImageOptimizer(),
+		createHtmlPlugin({
+			minify: true,
+			template: resolve(__dirname, 'index.html'),
+		}),
+	],
+	optimizeDeps: {
+		include: ['@fontsource/roboto'],
+	},
 });

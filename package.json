@@ -9,7 +9,7 @@
     "optimize-images": "node scripts/optimize-images.js",
     "compressed-image": "node scripts/compressed-image.js",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "NODE_ENV=pages npm run build",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
@@ -21,6 +21,10 @@
     "svgo": "^3.2.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
+    "vite-plugin-html": "^3.2.2",
     "vite-plugin-image-optimizer": "^1.1.7"
+  },
+  "dependencies": {
+    "@fontsource/roboto": "^5.0.8"
   }
 }

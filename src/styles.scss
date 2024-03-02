@@ -7,6 +7,12 @@ $grey: #f8f8f8;
   margin: 0 auto;
 }
 
+@mixin image {
+  position: absolute;
+  aspect-ratio: 1/1;
+  top: 0;
+}
+
 :root {
   font-family: "Roboto", sans-serif;
 
@@ -137,6 +143,8 @@ $grey: #f8f8f8;
 
     &#marquee-2 {
       transform: rotate(-4deg);
+      z-index: 2;
+      position: relative;
 
       span {
         animation: marquee 8s linear infinite;
@@ -147,7 +155,7 @@ $grey: #f8f8f8;
       transform: rotate(6deg) translateY(-40px);
 
       span {
-        animation: marquee 10s linear infinite;
+        animation: marquee-reverse 10s linear infinite;
       }
     }
   }
@@ -185,6 +193,7 @@ $grey: #f8f8f8;
     border-radius: 15px;
     padding: 24px;
     box-sizing: border-box;
+    position: relative;
 
     &-title {
       font-family: var(--third-family);
@@ -207,12 +216,24 @@ $grey: #f8f8f8;
       overflow: hidden;
       position: relative;
 
-      &-img {
+      &-wrapper {
         aspect-ratio: 1/1;
         width: 270px;
         position: absolute;
         top: 46px;
         left: 34px;
+      }
+
+      &-video {
+        @include image;
+        width: 100%;
+        left: 0;
+      }
+
+      &-fallback {
+        @include image;
+        width: 80%;
+        right: 20px;
       }
     }
 
@@ -335,6 +356,14 @@ $grey: #f8f8f8;
       justify-content: space-between;
       cursor: pointer;
       gap: 10px;
+
+      &:hover {
+        color: #696969;
+      }
+
+      &::-webkit-details-marker {
+        display: none;
+      }
     }
 
     &-title {
@@ -393,11 +422,15 @@ $grey: #f8f8f8;
       &_free {
         grid-row-end: span 1;
 
-        &-img {
+        &-wrapper {
           width: 128px;
           left: auto;
           top: -12px;
           right: 0;
+        }
+
+        &-fallback {
+          right: 10px;
         }
       }
 
@@ -520,12 +553,12 @@ $grey: #f8f8f8;
       padding: 20px 16px;
       border-radius: 10px;
       margin-bottom: 10px;
-  
+
       &-title {
         font-size: 18px;
         line-height: 110%;
       }
-  
+
       &-text {
         font-size: 16px;
       }
@@ -595,5 +628,15 @@ $grey: #f8f8f8;
 
   100% {
     transform: translateX(-100%)
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-100%)
+  }
+
+  100% {
+    transform: translateX(0)
   }
 }
