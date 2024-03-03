@@ -23,7 +23,9 @@ export default defineConfig({
 		manifest: false,
 	},
 	plugins: [
-		ViteImageOptimizer(),
+		ViteImageOptimizer({
+			test: /\.(jpe?g|png|gif|tiff|svg|avif)$/i,
+		}),
 		createHtmlPlugin({
 			minify: true,
 			template: resolve(__dirname, 'index.html'),
