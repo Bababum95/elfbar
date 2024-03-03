@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/ico" href="/fav.ico" />
@@ -86,17 +87,16 @@
         </p>
       </div>
     </div>
+
     <div class="delivery">
       <div class="delivery__item delivery__item_free">
         <p class="delivery__item-title">Kostenoser Versand</p>
         <p class="delivery__item-text">ab 39€</p>
-        <div class="delivery__item_free-wrapper">
-          <video class="delivery__item_free-video" autoplay loop muted webkit-playsinline playsinline>
-            <source src="/animation/delivered-by-a-drone.webm" type="video/webm">
-          </video>
-          <img class="delivery__item_free-fallback" src="/animation/delivered-by-a-drone.png"
-            alt="Delivered by a drone">
-        </div>
+        <picture class="delivery__item_free-image">
+          <source srcset="/animation/delivered-by-a-drone.webp" type="image/webp">
+          <source srcset="/animation/delivered-by-a-drone.gif" type="image/gif">
+          <img src="/animation/delivered-by-a-drone.png" alt="Delivered by a drone">
+        </picture>
       </div>
       <div class="delivery__item">
         <p class="delivery__item-title">Originale</p>
@@ -201,123 +201,127 @@
       </ul>
     </div>
 
-    <ul class="faq-list">
-      <li class="faq-list__item">
-        <details class="faq-list__item-details">
-          <summary class="faq-list__item-summary">
-            <h2 class="faq-list__item-title">
-              Wie überprüfe ich die Echtheit meiner Elf Bar?
-            </h2>
-            <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
-              <use xlink:href="#big-arow" />
-            </svg>
-          </summary>
-          <p class="faq-list__item-text">
-            Jede Elf Bar kommt mit einem Authentifizierungscode, den Du auf der offiziellen Website überprüfen kannst,
-            um
-            die Echtheit zu bestätigen.
-          </p>
-        </details>
-      </li>
-      <li class="faq-list__item">
-        <details class="faq-list__item-details">
-          <summary class="faq-list__item-summary">
-            <h2 class="faq-list__item-title">
-              Wie lagere ich meine Elf Bar richtig?
-            </h2>
-            <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
-              <use xlink:href="#big-arow" />
-            </svg>
-          </summary>
-          <p class="faq-list__item-text">
-            Bewahre Deine Elf Bar an einem kühlen, trockenen Ort auf, fern von direkter Sonneneinstrahlung und
-            Wärmequellen, um die Qualität zu bewahren.
-          </p>
-        </details>
-      </li>
-      <li class="faq-list__item">
-        <details class="faq-list__item-details">
-          <summary class="faq-list__item-summary">
-            <h2 class="faq-list__item-title">
-              Wie unterscheiden sich verschiedene Elf Bar Modelle?
-            </h2>
-            <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
-              <use xlink:href="#big-arow" />
-            </svg>
-          </summary>
-          <p class="faq-list__item-text">
-            <a href="#">Jedes Elf Bar Modell</a> bietet unterschiedliche Geschmacksrichtungen, Batterielebensdauer und
-            Design, um eine
-            breite Palette von Vorlieben und Bedürfnissen zu erfüllen.
-          </p>
-        </details>
-      </li>
-      <li class="faq-list__item">
-        <details class="faq-list__item-details">
-          <summary class="faq-list__item-summary">
-            <h2 class="faq-list__item-title">
-              Kann ich meine Elf Bar im Flugzeug mitnehmen?
-            </h2>
-            <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
-              <use xlink:href="#big-arow" />
-            </svg>
-          </summary>
-          <p class="faq-list__item-text">
-            Ja, Elf Bars können im Handgepäck mitgeführt werden, beachten Sie jedoch die Fluggesellschaftsrichtlinien
-            bezüglich elektronischer Geräte und Flüssigkeiten.
-          </p>
-        </details>
-      </li>
-      <li class="faq-list__item">
-        <details class="faq-list__item-details">
-          <summary class="faq-list__item-summary">
-            <h2 class="faq-list__item-title">
-              Wie verwende ich meine Elf Bar?
-            </h2>
-            <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
-              <use xlink:href="#big-arow" />
-            </svg>
-          </summary>
-          <p class="faq-list__item-text">
-            Einfach am Mundstück ziehen – Elf Bars sind mit einer automatischen Aktivierung ausgestattet, die den
-            Gebrauch
-            kinderleicht macht.
-          </p>
-        </details>
-      </li>
-      <li class="faq-list__item">
-        <details class="faq-list__item-details">
-          <summary class="faq-list__item-summary">
-            <h2 class="faq-list__item-title">
-              Kann ich meine Elf Bar wieder aufladen?
-            </h2>
-            <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
-              <use xlink:href="#big-arow" />
-            </svg>
-          </summary>
-          <p class="faq-list__item-text">
-            Modelle wie <a href="#">Elfbar Mate</a> und <a href="#">Elfbar ELFA</a> ermöglichen eine Wiederaufladung,
-            während die <a href="#">Elfbar 600</a> für den
-            Einmalgebrauch ohne Auflademöglichkeit gedacht ist.
-          </p>
-        </details>
-      </li>
-      <li class="faq-list__item">
-        <details class="faq-list__item-details">
-          <summary class="faq-list__item-summary">
-            <h2 class="faq-list__item-title">
-              Wie entsorge ich meine Elf Bar?
-            </h2>
-            <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
-              <use xlink:href="#big-arow" />
-            </svg>
-          </summary>
-          <p class="faq-list__item-text">
-            Elf Bars sollten nicht im Hausmüll entsorgt werden, sondern als Elektroschrott. Es gibt zahlreiche spezielle
-            Sammelstellen, um eine umweltgerechte Entsorgung sicherzustellen.
-          </p>
-      </li>
-    </ul>
+    <div class="faq">
+      <p class="faq__title">FAQ - Frequently Asked Questions</p>
+      <ul class="faq-list">
+        <li class="faq-list__item">
+          <details class="faq-list__item-details">
+            <summary class="faq-list__item-summary">
+              <h2 class="faq-list__item-title">
+                Wie überprüfe ich die Echtheit meiner Elf Bar?
+              </h2>
+              <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
+                <use xlink:href="#big-arow" />
+              </svg>
+            </summary>
+            <p class="faq-list__item-text">
+              Jede Elf Bar kommt mit einem Authentifizierungscode, den Du auf der offiziellen Website überprüfen kannst,
+              um
+              die Echtheit zu bestätigen.
+            </p>
+          </details>
+        </li>
+        <li class="faq-list__item">
+          <details class="faq-list__item-details">
+            <summary class="faq-list__item-summary">
+              <h2 class="faq-list__item-title">
+                Wie lagere ich meine Elf Bar richtig?
+              </h2>
+              <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
+                <use xlink:href="#big-arow" />
+              </svg>
+            </summary>
+            <p class="faq-list__item-text">
+              Bewahre Deine Elf Bar an einem kühlen, trockenen Ort auf, fern von direkter Sonneneinstrahlung und
+              Wärmequellen, um die Qualität zu bewahren.
+            </p>
+          </details>
+        </li>
+        <li class="faq-list__item">
+          <details class="faq-list__item-details">
+            <summary class="faq-list__item-summary">
+              <h2 class="faq-list__item-title">
+                Wie unterscheiden sich verschiedene Elf Bar Modelle?
+              </h2>
+              <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
+                <use xlink:href="#big-arow" />
+              </svg>
+            </summary>
+            <p class="faq-list__item-text">
+              <a href="#">Jedes Elf Bar Modell</a> bietet unterschiedliche Geschmacksrichtungen, Batterielebensdauer und
+              Design, um eine
+              breite Palette von Vorlieben und Bedürfnissen zu erfüllen.
+            </p>
+          </details>
+        </li>
+        <li class="faq-list__item">
+          <details class="faq-list__item-details">
+            <summary class="faq-list__item-summary">
+              <h2 class="faq-list__item-title">
+                Kann ich meine Elf Bar im Flugzeug mitnehmen?
+              </h2>
+              <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
+                <use xlink:href="#big-arow" />
+              </svg>
+            </summary>
+            <p class="faq-list__item-text">
+              Ja, Elf Bars können im Handgepäck mitgeführt werden, beachten Sie jedoch die Fluggesellschaftsrichtlinien
+              bezüglich elektronischer Geräte und Flüssigkeiten.
+            </p>
+          </details>
+        </li>
+        <li class="faq-list__item">
+          <details class="faq-list__item-details">
+            <summary class="faq-list__item-summary">
+              <h2 class="faq-list__item-title">
+                Wie verwende ich meine Elf Bar?
+              </h2>
+              <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
+                <use xlink:href="#big-arow" />
+              </svg>
+            </summary>
+            <p class="faq-list__item-text">
+              Einfach am Mundstück ziehen – Elf Bars sind mit einer automatischen Aktivierung ausgestattet, die den
+              Gebrauch
+              kinderleicht macht.
+            </p>
+          </details>
+        </li>
+        <li class="faq-list__item">
+          <details class="faq-list__item-details">
+            <summary class="faq-list__item-summary">
+              <h2 class="faq-list__item-title">
+                Kann ich meine Elf Bar wieder aufladen?
+              </h2>
+              <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
+                <use xlink:href="#big-arow" />
+              </svg>
+            </summary>
+            <p class="faq-list__item-text">
+              Modelle wie <a href="#">Elfbar Mate</a> und <a href="#">Elfbar ELFA</a> ermöglichen eine Wiederaufladung,
+              während die <a href="#">Elfbar 600</a> für den
+              Einmalgebrauch ohne Auflademöglichkeit gedacht ist.
+            </p>
+          </details>
+        </li>
+        <li class="faq-list__item">
+          <details class="faq-list__item-details">
+            <summary class="faq-list__item-summary">
+              <h2 class="faq-list__item-title">
+                Wie entsorge ich meine Elf Bar?
+              </h2>
+              <svg class="faq-list__item-arrow" width="9" height="15" fill="none" stroke="#000">
+                <use xlink:href="#big-arow" />
+              </svg>
+            </summary>
+            <p class="faq-list__item-text">
+              Elf Bars sollten nicht im Hausmüll entsorgt werden, sondern als Elektroschrott. Es gibt zahlreiche
+              spezielle
+              Sammelstellen, um eine umweltgerechte Entsorgung sicherzustellen.
+            </p>
+        </li>
+      </ul>
+    </div>
   </main>
   <svg display="none" xmlns="http://www.w3.org/2000/svg">
     <symbol id="arow" viewBox="0 0 6 10" width="6" height="10" fill="none">
