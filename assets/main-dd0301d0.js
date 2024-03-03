@@ -1,1 +1,0 @@
-const e=document.querySelector(".delivery__item_free-video"),t=document.querySelector(".delivery__item_free-fallback");e.addEventListener("error",()=>{e.style.display="none",t.style.display="block"});e.addEventListener("loadeddata",()=>{t.style.display="none"});
