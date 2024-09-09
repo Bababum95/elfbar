@@ -1,0 +1,1 @@
+const t=document.querySelector(".popup"),o=document.querySelectorAll(".popup__button");o[0].addEventListener("click",()=>{window.location.href="https://www.google.com"});o[1].addEventListener("click",()=>{t==null||t.classList.add("close")});
