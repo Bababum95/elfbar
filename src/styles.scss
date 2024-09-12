@@ -1,4 +1,4 @@
-@import "./normalize", "./popup";
+@import './normalize', './_mixins', './popup';
 
 $grey: #f8f8f8;
 $hint: #9a9a9a;
@@ -15,7 +15,7 @@ $hint: #9a9a9a;
 }
 
 :root {
-  font-family: "Roboto", sans-serif;
+  font-family: Inter, sans-serif;
 
   color-scheme: light;
   color: #000000;
@@ -41,12 +41,12 @@ $hint: #9a9a9a;
   display: block;
   width: 154px;
   height: 50px;
-  background-image: url("/logo.png");
+  background-image: url('/logo.png');
   background-size: contain;
   transition: all 0.2s ease;
 
   &:hover {
-    background-image: url("/logo-active.png");
+    background-image: url('/logo-active.png');
   }
 }
 
@@ -66,43 +66,8 @@ $hint: #9a9a9a;
   }
 
   &__button {
-    padding: 15px 52px;
-    background: #000;
-    color: #fff;
-    border-radius: 20px;
-    border: none;
-    line-height: 110%;
-    text-decoration-line: none;
     width: fit-content;
-    font-size: 19px;
-    font-style: normal;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    position: relative;
-    display: block;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        135deg,
-        #fdd8bb 0%,
-        #db71e0 0.01%,
-        #a25eef 50.89%,
-        #68cbe2 98.89%
-      );
-      border-radius: 20px;
-      z-index: -1;
-    }
-
-    &:hover,
-    &:active {
-      background: transparent;
-    }
+    @include primary-button;
   }
 }
 
@@ -188,36 +153,9 @@ $hint: #9a9a9a;
       }
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 1px;
-      left: 1px;
-      right: 1px;
-      bottom: 1px;
-      background: linear-gradient(
-        135deg,
-        #fdd8bb 0%,
-        #db71e0 0.01%,
-        #a25eef 50.89%,
-        #68cbe2 98.89%
-      );
-      border-radius: 20px;
-      z-index: -1;
-    }
-
     &:hover,
     &:active {
-      background: transparent;
-      color: #fff;
-
-      .sorten__item-span {
-        color: #fff;
-      }
-
-      svg {
-        stroke: #fff;
-      }
+      scale: 1.04;
     }
   }
 }
@@ -234,6 +172,9 @@ $hint: #9a9a9a;
     box-sizing: border-box;
     position: relative;
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     &-title {
       font-weight: 600;
@@ -252,8 +193,6 @@ $hint: #9a9a9a;
     }
 
     &_free {
-      position: relative;
-
       &-image {
         aspect-ratio: 1/1;
         position: absolute;
@@ -270,13 +209,13 @@ $hint: #9a9a9a;
     }
 
     &_dhl {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
       img {
         width: 119px;
       }
+    }
+
+    &_origin {
+      padding-block: 11px;
     }
   }
 
